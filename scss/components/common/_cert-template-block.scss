@@ -1,0 +1,17 @@
+.cert-template-block{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $text-color;
+
+	.block-image{
+		margin-bottom: 20px;
+		max-width: 150px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.procedure-section{
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 400px;
+		grid-gap: 30px;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.about-diagnostics-section + .procedure-section{
+	padding-bottom: 30px;
+}
+
+.procedure-section + section.light-bg{
+	margin-top: 70px;
+}

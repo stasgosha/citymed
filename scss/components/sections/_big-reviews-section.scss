@@ -1,0 +1,31 @@
+.big-reviews-section{
+	padding: 80px 0;
+
+	.section-header{
+		display: grid;
+		grid-template-columns: min-content min-content;
+		grid-gap: 20px;
+		justify-content: center;
+		margin-bottom: 55px;
+
+		.btn{
+			white-space: nowrap;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-header{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			> .item{
+				margin-bottom: 30px;
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

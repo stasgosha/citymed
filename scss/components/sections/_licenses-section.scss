@@ -1,0 +1,36 @@
+.licenses-section{
+	padding: 85px 0;
+
+	.section-caption{
+		margin-bottom: 30px;
+	}
+
+	.section-footer{
+		margin-top: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.prices-page &{
+		padding-top: 40px;
+	}
+}
+
+.licenses-slider{
+	.slide{
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.license-card{
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}

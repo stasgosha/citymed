@@ -1,0 +1,44 @@
+.phone-link{
+	text-transform: uppercase;
+	font-family: $second-font;
+	font-weight: bold;
+	color: $primary;
+	font-size: 22px;
+	line-height: 1.36;
+	display: block;
+
+	strong{
+		color: $text-dark;
+		transition: all $t;
+	}
+
+	&:hover{
+		color: $accent;
+
+		strong{
+			color: $accent;
+		}
+	}
+
+	&:not(.no-media){
+		@media screen and (max-width: 767px){
+			font-size: 16px;
+		}
+
+		@media screen and (max-width: 575px){
+			font-size: 14px;
+		}
+	}
+}
+
+.can-not-call{
+	font-size: 14px;
+	line-height: 1.4285;
+	color: $primary;
+	margin-top: 2px;
+	display: block;
+
+	&:hover{
+		color: $accent;
+	}
+}

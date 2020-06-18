@@ -1,0 +1,37 @@
+.add-review-section{
+	padding-bottom: 80px;
+
+	.small-caption{
+		font-size: 24px;
+		font-weight: 500;
+		color: $text-dark;
+		font-family: $second-font;
+		margin-bottom: 10px;
+	}
+}
+
+.review-form{
+	.form-inner{
+		display: grid;
+		grid-template-columns: 1fr 370px;
+		grid-gap: 30px;
+	}
+
+	.form-field{
+		width: 100%;
+	}
+
+	@media screen and (max-width: 991px){
+		.form-inner{
+			grid-template-columns: 1fr 320px;
+			grid-gap: 20px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.form-inner{
+			grid-template-columns: 1fr;
+			grid-gap: 18px;
+		}
+	}
+}

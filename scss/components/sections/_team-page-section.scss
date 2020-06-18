@@ -1,0 +1,31 @@
+.team-page-section{
+	padding: 80px 0;
+
+	.section-footer{
+		margin-top: 50px;
+	}
+
+	.section-header{
+		margin-bottom: 30px;
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: 1fr max-content;
+		grid-gap: 20px;
+		align-items: center;
+
+		@media screen and (max-width: 991px){
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.selects-list{
+	display: grid;
+	grid-template-columns: max-content max-content;
+	grid-gap: 20px;
+
+	@media screen and (max-width: 639px){
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+}

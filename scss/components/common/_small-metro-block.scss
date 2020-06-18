@@ -1,0 +1,23 @@
+.small-metro-block{
+	display: flex;
+	align-items: center;
+
+	.block-color{
+		width: 21px;
+		height: 21px;
+		border-radius: 50%;
+		background: #92007b;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #fff;
+		margin-right: 7px;
+		line-height: .8;
+	}
+
+	.block-name{
+		line-height: 21px;
+	}
+}

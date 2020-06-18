@@ -1,0 +1,12 @@
+[class^="icon-"], [class*=" icon-"]{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: url(../img/icons-sprite.png) no-repeat;
+}
+
+.icon-coins{
+	width: 16px;
+	height: 16px;
+	background: url(../img/icons/coin.png);
+}

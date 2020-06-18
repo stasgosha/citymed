@@ -1,0 +1,47 @@
+.prices-section{
+	padding: 35px 0 80px;
+
+	.tabs-nav{
+		margin-bottom: 40px;
+	}
+
+	.prices-page &{
+		padding: 80px 0 20px;
+	}
+}
+
+.prices-header{
+	display: flex;
+	margin-bottom: 40px;
+	border-radius: $r;
+	background: #f2f7fd;
+	padding: 12px 20px;
+	align-items: center;
+	justify-content: space-between;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.tabs-select{
+		background-color: #fff;
+	}
+
+	@media screen and (max-width: 575px){
+		flex-direction: column;
+		align-items: center;
+
+		.item{
+			margin-bottom: 15px;
+			width: 100%;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		.tabs-select{
+			width: 100%;
+		}
+	}
+}

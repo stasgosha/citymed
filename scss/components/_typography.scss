@@ -1,0 +1,180 @@
+// .tpg - typoraphy prefix
+
+body,
+button{
+	font-size: 15px;
+	line-height: 1.6;
+	font-family: $main-font;
+
+	@media screen and (max-width: 1199px){
+		font-size: 14px;
+	}
+}
+
+body{
+	color: $text-color;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.tpg{
+	color: $text-color;
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	p{
+		font-size: 15px;
+		line-height: 1.6;
+		margin: 0 0 1.6em;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		big{
+			font-size: 20px;
+		}
+
+		@media screen and (max-width: 1199px){
+			font-size: 14px;
+		}
+	}
+
+	a:not(.btn){
+		color: $primary;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	h3,h4{
+		font-size: 24px;
+		margin-bottom: 20px;
+		font-weight: 500;
+		color: $text-dark;
+
+		@media screen and (max-width: 767px){
+			font-size: 18px;
+		}
+	}
+}
+
+.section-caption{
+	margin-bottom: 20px;
+	text-align: center;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	a{
+		color: $primary;
+
+		&:hover{
+			color: darken($primary, 10%);
+		}
+	}
+
+	.sc-title{
+		font-size: 36px;
+		line-height: 1.333;
+		font-weight: 500;
+		color: $text-dark;
+		position: relative;
+		font-family: $second-font;
+
+		strong{
+			font-weight: inherit;
+			color: $primary;
+		}
+
+		&.small{
+			font-size: 26px;
+		}
+	}
+
+	.sc-subtitle{
+		font-size: 16px;
+		line-height: 1.6;
+		margin-top: 16px;
+
+		strong{
+			color: $primary;
+		}
+	}
+
+	&.text-left{
+		text-align: left;
+	}
+
+	@media screen and (max-width: 767px){
+		.sc-title{
+			font-size: 26px;
+		}
+	}
+}
+
+.text-link{
+	font-size: 15px;
+	line-height: 1.6;
+	color: $primary;
+	font-weight: 400;
+	text-decoration: underline;
+
+	&:hover{
+		text-decoration: none;
+		color: $accent;
+	}
+
+	&.big{
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&.map-link{
+		display: flex;
+		align-items: center;
+
+		.link-icon{
+			flex: none;
+			margin-left: 9px;
+
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&.dashed{
+		text-decoration: none;
+		border-bottom: 1px dashed $primary;
+
+		&:hover{
+			border-bottom: 0;
+		}
+	}
+}
+
+.page-caption{
+	margin-bottom: 30px;
+	font-size: 20px;
+	line-height: 1.6;
+	color: #fff;
+	font-weight: 400;
+
+	strong{
+		font-size: 60px;
+		line-height: 0.8;
+		font-family: $second-font;
+		font-weight: 500;
+	}
+}

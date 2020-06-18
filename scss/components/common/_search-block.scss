@@ -1,0 +1,52 @@
+.search-block{
+	width: 100%;
+	max-width: 270px;
+	position: relative;
+
+	.search-field{
+		display: block;
+		padding: 0 40px 0 0;
+		height: 26px;
+		font-size: inherit;
+		background: transparent;
+		border: 0;
+		border-bottom: 1px solid transparent;
+		transition: all $t;
+		color: $text-color;
+		appearance: none;
+		width: 100%;
+
+		&::placeholder{
+			color: $text-color;
+			opacity: 1;
+			transition: all $t;
+		}
+
+		&:focus{
+			outline: none;
+			border-bottom-color: $primary;
+		}
+	}
+
+	.search-button{
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		right: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.btn-icon{
+			width: 16px;
+			height: 16px;
+			fill: $primary;
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		max-width: 80px;
+	}
+}

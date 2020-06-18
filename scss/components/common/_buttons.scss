@@ -1,0 +1,65 @@
+.btn{
+	color: $primary;
+	font-weight: 400;
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.3;
+	padding: 10px 45px;
+	min-height: 44px;
+	background: transparent;
+	font-family: $main-font;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all $t;
+	cursor: pointer;
+	border-radius: 22px;
+	appearance: none;
+	box-shadow: none;
+	border: 1px solid $primary;
+	text-transform: uppercase;
+	// min-width: 180px;
+
+	&:hover,
+	&:focus{
+		background: $dark;
+		color: #fff;
+		border-color: $dark;
+	}
+
+	&:focus{
+		// outline: none;
+	}
+
+	&.btn-fullwidth{
+		width: 100%;
+	}
+
+	&.btn-filled{
+		background: $gradient;
+		color: #fff;
+
+		&:hover{
+			background: #fff;
+			color: $dark;
+		}
+	}
+
+	&.btn-small-radius{
+		border-radius: 5px;
+		min-height: 38px;
+		font-size: 15px;
+		text-transform: none;
+		padding: 5px 35px;
+	}
+
+	&.btn-accent{
+		color: #fff;
+		border-color: $accent;
+		background: $accent;
+
+		&:hover{
+			background: darken($accent, 10%);
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.about-diagnostics-section{
+	padding: 60px 0 35px;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 8fr 4fr;
+		grid-gap: 30px;
+		margin-bottom: 45px;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			grid-template-columns: 7fr 5fr;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-inner{
+			grid-template-columns: 1fr;
+		}
+	}
+}

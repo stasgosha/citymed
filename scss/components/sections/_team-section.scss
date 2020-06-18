@@ -1,0 +1,169 @@
+.team-section{
+	padding: 110px 0 70px;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 66.666% 33.333%;
+		// align-items: center;
+		grid-gap: 30px;
+	}
+
+	.section-slider{
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-content{
+		position: relative;
+		padding-left: 85px;
+		padding-top: 20px;
+
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: -40px;
+			top: 0;
+			height: 240px;
+			width: 780px;
+			background: #f2f7fd url(../img/decorations/team-grid.png) no-repeat right top;
+			pointer-events: none;
+			z-index: -1;
+		}
+
+		.section-caption{
+			margin-bottom: 10px;
+		}
+
+		.section-footer{
+			margin-top: 85px;
+		}
+	}
+
+	@media screen and (max-width: 1299px){
+		.section-inner{
+			grid-template-columns: 50% 50%;
+		}
+
+		.section-content{
+			padding-left: 25px;
+			padding-top: 35px;
+
+			&:before{
+				height: 213px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			flex-direction: column-reverse;
+			display: flex;
+		}
+
+		.section-content{
+			padding: 0;
+			margin-bottom: 30px;
+
+			&:before{
+				display: none;
+			}
+		}
+
+		.section-footer{
+			display: none;
+		}
+
+		.section-mobile-footer{
+			align-items: center;
+			justify-content: center;
+			margin-top: 30px;
+		}
+	}
+}
+
+.team-slider{
+	.slick-arrow{
+		top: 150px;
+	}
+
+	@media screen and (max-width: 1199px){
+		.slick-arrow{
+			top: 140px;
+
+			&.slick-prev{
+				left: -35px;
+			}
+
+			&.slick-next{
+				right: -35px;
+			}
+		}
+	}
+}
+
+.team-card{
+	display: flex;
+	flex-direction: column;
+	max-width: 290px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.card-image{
+		position: relative;
+		background: #c0e9ff;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		transition: all $t;
+
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+		img{
+			display: block;
+			max-width: 96%;
+			max-height: 96%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+		}
+
+		&:hover{
+			background: $primary;
+		}
+	}
+
+	.card-content{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card-name{
+		text-align: center;
+		font-size: 18px;
+		line-height: 1.333;
+		font-weight: 500;
+		color: $primary;
+		margin-bottom: 10px;
+	}
+
+	.card-position{
+		margin-bottom: 13px;
+	}
+
+	@media screen and (max-width: 374px){
+		.card-name{
+			font-size: 15px;
+		}
+
+		.card-position{
+			font-size: 12px;
+		}
+	}
+}

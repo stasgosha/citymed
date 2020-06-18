@@ -1,0 +1,39 @@
+.documents-block{
+	background: #eff5fb;
+	border-radius: 5px;
+	padding: 15px 20px 20px;
+	margin-bottom: 40px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.block-caption{
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-weight: 500;
+		color: $text-dark;
+		font-family: $second-font;
+	}
+}
+
+.order-list{
+	list-style: none;
+	counter-reset: ol;
+
+	li{
+		counter-increment: ol;
+		margin-bottom: 10px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&:before{
+			content: counter(ol)'.  ';
+			color: $accent;
+			font-weight: bold;
+			font-family: inherit;
+		}
+	}
+}

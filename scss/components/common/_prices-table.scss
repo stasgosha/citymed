@@ -1,0 +1,106 @@
+.prices-table{
+	padding: 23px 20px 12px;
+	border-radius: 5px;
+	border: 1px solid #e6e9ee;
+
+	table{
+		width: 100%;
+		border-collapse: collapse;
+
+		th,
+		td{
+			padding: 10px 25px;
+			height: 50px;
+			margin: 0;
+		}
+
+		.price-cell{
+			@media screen and (min-width: 991px){
+				width: 245px;
+			}
+		}
+
+		th{
+			font-weight: bold;
+			text-align: left;
+			color: #fff;
+			background: $gradient;
+			border-right: 1px solid #fff;
+
+			&:first-child{
+				border-radius: $r 0 0 $r;
+			}
+
+			&:last-child{
+				border-radius: 0 $r $r 0;
+				border-right: 0;
+				text-align: center;
+			}
+		}
+
+		td{
+			border-right: 1px solid #eef3f9;
+			border-bottom: 1px solid #eef3f9;
+
+			&:last-child{
+				border-right: 0;
+				text-align: center;
+			}
+
+			i{
+				margin-right: 5px;
+				transform: translateY(2px);
+			}
+		}
+
+		tr:last-child{
+			td{
+				border-bottom: 0;
+			}
+		}
+
+		.sm-visible-table-row{
+			td{
+				text-align: left;
+			}
+		}
+
+		.big-paddings{
+			td{
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		}
+
+		strong{
+			font-weight: bold;
+			color: $text-dark;
+		}
+
+		a:not(.text-link){
+			color: inherit;
+			font-weight: bold;
+			color: $text-dark;
+
+			&:hover{
+				color: $accent;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		padding: 0;
+
+		table{
+			th,
+			td{
+				padding: 5px 10px;
+			}
+		}
+	}
+
+	.accordion &{
+		padding: 0;
+		border: 0;
+	}
+}

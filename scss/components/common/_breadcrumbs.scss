@@ -1,0 +1,45 @@
+.breadcrumbs-section{
+	padding: 5px 0;
+	position: absolute;
+	width: 100%;
+}
+
+.breadcrumbs{
+	display: flex;
+	flex-wrap: wrap;
+
+	li{
+		margin-right: 24px;
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: 0.025em;
+		color: #9c9793;
+		position: relative;
+
+		&:after{
+			content: '\\';
+			position: absolute;
+			right: -12px;
+			transform: translateX(50%);
+		}
+
+		a{
+			color: inherit;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+
+			a{
+				pointer-events: none;
+				cursor: default;
+			}
+		}
+	}
+}

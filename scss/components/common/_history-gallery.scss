@@ -1,0 +1,129 @@
+.history-gallery{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	&:before,
+	&:after{
+		content: '';
+		display: block;
+		width: 210px;
+		height: 30px;
+		position: absolute;
+		top: 30px;
+		z-index: 5;
+	}
+
+	&:before{
+		left: -15px;
+		background: linear-gradient(to right, #f2f7fd 0%, transparent 100%);
+	}
+
+	&:after{
+		right: -15px;
+		background: linear-gradient(to left, #f2f7fd 0%, transparent 100%);
+	}
+
+	.content-slider{
+		max-width: 800px;
+	}
+}
+
+.timeline-slider{
+	text-align: center;
+	margin-bottom: 70px;
+	position: relative;
+
+	&:before{
+		content: '';
+		display: block;
+		border-bottom: 2px dashed #95bfdb;
+		position: absolute;
+		bottom: 12px;
+		left: 0;
+		width: 100%;
+	}
+
+	.slick-arrow{
+		top: 73px;
+
+		&.slick-prev{
+			left: -35px;
+		}
+
+		&.slick-next{
+			right: -35px;
+		}
+	}
+
+	.year{
+		font-size: 16px;
+		line-height: 27px;
+		color: $text-dark;
+		font-weight: bold;
+		transition: all $t;
+		cursor: pointer;
+		height: 27px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		position: relative;
+		text-align: center;
+		z-index: 2;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background: $primary;
+			border: 5px solid #fff;
+			transition: all $t;
+			box-shadow: $shadow;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -25px;
+		}
+	}
+
+	.slick-current{
+		.year{
+			font-size: 30px;
+			color: $accent;
+		}
+	}
+}
+
+.event-card{
+	position: relative;
+	background: #fff;
+	border-radius: 10px;
+	padding: 25px 40px;
+	text-align: center;
+	box-shadow: $shadow;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 86px;
+		height: 37px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 100%;
+		background: url(../img/decorations/history-corner.png) no-repeat center bottom / contain;
+	}
+
+	.card-caption{
+		color: $text-dark;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+
+	@media screen and (max-width: 575px){
+		padding: 25px 20px;
+	}
+}

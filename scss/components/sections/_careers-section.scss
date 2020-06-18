@@ -1,0 +1,26 @@
+.careers-section{
+	padding: 80px 0;
+
+	.section-caption{
+		margin-bottom: 30px;
+	}
+}
+
+.careers-list{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 15px 30px;
+
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 500;
+	font-family: $second-font;
+
+	a{
+		color: $primary;
+
+		&:hover{
+			color: $accent;
+		}
+	}
+}

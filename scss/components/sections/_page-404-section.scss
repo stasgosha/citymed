@@ -1,0 +1,46 @@
+.page-404-section{
+	padding: 120px 0 110px;
+
+	.section-inner{
+		display: grid;
+		grid-gap: 30px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.section-image{
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.section-caption{
+		margin-bottom: 25px;
+	}
+
+	.section-footer{
+		margin-top: 55px;
+	}
+
+	@media screen and (max-width: 767px){
+		text-align: center;
+
+		.section-image{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.section-caption{
+			.sc-title{
+				text-align: center;
+			}
+		}
+
+		.section-inner{
+			align-items: center;
+			grid-template-columns: 1fr;
+		}
+	}
+}

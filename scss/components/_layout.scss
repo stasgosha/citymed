@@ -1,0 +1,315 @@
+*,
+*:after,
+*:before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: $main-font;
+	position: relative;
+	background: $body-bg;
+	background-attachment: fixed;
+
+	&:before{
+		content: '';
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		transition: all $t;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: rgba(#000, .73);
+		z-index: 180;
+		pointer-events: none;
+	}
+
+	&.menu-opened{
+		&:before{
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+	}
+
+	&.overflow{
+		overflow: hidden;
+	}
+
+	&.modal-visible{
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	img{
+		max-width: unset;
+	}
+}
+
+strong{
+	font-weight: 600;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+button{
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	appearance: none;
+	// outline: none !important;
+}
+
+a, button{
+	text-decoration: none;
+	transition: all $t;
+	outline: none !important;
+	border: none;
+}
+
+a img{
+	outline: none !important;
+	border: none !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+picture, iframe, figure{
+	display: block;
+}
+
+.wrapper{
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.page{
+		flex: auto;
+
+		.inner-page{
+			position: relative;
+			padding-top: 12px;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 12px;
+				background: #f2f7fd;
+				box-shadow: inset 0 3px 7px rgba(#000, .04);
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 5;
+			}
+		}
+	}
+
+	.footer{
+		flex: none;
+	}
+}
+
+.container{
+	width: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+
+	@media screen and (min-width: 375px){
+		padding: 0 16px;
+	}
+
+	@media screen and (min-width: 576px){
+		// max-width: 555px;
+	}
+
+	@media screen and (min-width: 768px){
+		max-width: 750px;
+	}
+
+	@media screen and (min-width: 992px){
+		max-width: 100%;
+		padding: 0 15px;
+		max-width: 940px;
+	}
+
+	@media screen and (min-width: 1200px){
+		max-width: 1200px;
+	}
+}
+
+.cards-list{
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 20px);
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -20px;
+
+	> .item{
+		padding: 0 10px;
+		margin-bottom: 20px;
+	}
+
+	&.columns-6{
+		> .item{
+			width: 16.666%;
+		}
+	}
+
+	&.columns-5{
+		> .item{
+			width: 20%;
+		}
+	}
+
+	&.columns-4{
+		> .item{
+			width: 25%;
+		}
+	}
+
+	&.columns-3{
+		> .item{
+			width: 33.3333%;
+		}
+	}
+
+	&.columns-2{
+		> .item{
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 1299px){
+		&.lg-columns-4{
+			> .item{
+				width: 25%;
+			}
+		}
+
+		&.lg-columns-3{
+			> .item{
+				width: 33.333%;
+			}
+		}
+
+		&.lg-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.lg-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		&.md-columns-4{
+			> .item{
+				width: 25%;
+			}
+		}
+
+		&.md-columns-3{
+			> .item{
+				width: 33.333%;
+			}
+		}
+
+		&.md-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.md-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		width: calc(100% + 10px * 2);
+		margin-left: -10px;
+		margin-right: -10px;
+		margin-bottom: -20px;
+		
+		> .item{
+			padding: 0 10px;
+			margin-bottom: 20px;
+		}
+
+		&.sm-columns-3{
+			> .item{
+				width: 33.333%;
+			}
+		}
+
+		&.sm-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.sm-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		width: calc(100% + 5px * 2);
+		margin-left: -5px;
+		margin-right: -5px;
+		margin-bottom: -10px;
+		
+		> .item{
+			padding: 0 5px;
+			margin-bottom: 10px;
+		}
+
+		&.xs-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.xs-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.light-bg{
+	background: #f2f7fd;
+}

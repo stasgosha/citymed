@@ -1,0 +1,274 @@
+.header{
+	// position: fixed;
+	position: relative;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: #fff;
+
+	.header-inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.header-block{
+			padding: 0 15px;
+		}
+	}
+
+	.header-row{
+		&.first{
+			background: #f2f7fd;
+			padding: 9px 0;
+		}
+
+		&.second{
+			padding: 17px 0 23px;
+		}
+
+		&.third{
+			border-top: 1px solid #eef3f9;
+
+			@media screen and (max-width: 767px){
+				margin-left: -15px;
+				margin-right: -15px;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1199px){
+		.header-worktime{
+			margin-left: auto;
+			margin-right: 120px;
+		}
+	}
+
+	.header-top-nav{
+		flex: auto;
+		width: 100%;
+		margin-right: -30px;
+	}
+
+	.header-branches{
+		flex: none;
+	}
+}
+
+.small-top-nav{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 1.4285;
+
+	li{
+		margin-right: 35px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		a{
+			color: $primary;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		&.current-menu-item,
+		&.current-menu-parent{
+			a{
+				color: $accent;
+			}
+		}
+		
+		&.current-menu-item{
+			a{
+				cursor: default;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		li{
+			margin-right: 15px;
+		}
+	}
+}
+
+.logo-block{
+	display: flex;
+	align-items: center;
+
+	.block-icon{
+		margin-right: 13px;
+		flex: none;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.block-content{
+		.logo-name{
+			font-size: 27px;
+			line-height: 30px;
+			font-family: $second-font;
+			font-weight: bold;
+			color: $primary;
+			text-transform: uppercase;
+
+			.color-accent{
+				color: $accent;
+			}
+		}
+
+		.logo-info{
+			font-size: 14px;
+			line-height: 20px;
+			color: #57758f;
+		}
+	}
+}
+
+.top-nav{
+	position: relative;
+	z-index: 5;
+
+	> ul{
+		display: flex;
+
+		> li{
+			flex: auto;
+			border-left: 1px solid #eef3f9;
+			position: relative;
+
+			> a{
+				display: flex;
+				align-items: center;
+				padding: 10px 22px;
+				color: $text-color;
+				white-space: nowrap;
+				min-height: 50px;
+
+				&:hover{
+					color: $primary;
+				}
+			}
+
+			// First level
+			> .sub-menu{
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 100%;
+				transform: translateY(30px);
+				opacity: 0;
+				visibility: hidden;
+				transition: all $t;
+				background: #fff;
+
+				li{
+					font-size: 13px;
+					line-height: 1.4;
+					position: relative;
+					border-top: 1px solid #eef3f9;
+
+					&.menu-item-has-children{
+						&:after{
+							content: '';
+							display: block;
+							width: 7px;
+							height: 12px;
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							right: 10px;
+							background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 204 344'%3e%3cpath d='M141 172L0 312l32 32 172-172L32 0 0 32l141 140z' fill='%23009cd6'/%3e%3c/svg%3e") no-repeat center center / contain;
+						}
+					}
+
+					a{
+						display: block;
+						padding: 10px 15px;
+					}
+
+					.sub-menu{
+						width: 100%;
+						width: 400px;
+						position: absolute;
+						left: 100%;
+						top: -1px;
+						transform: translateX(30px);
+						opacity: 0;
+						visibility: hidden;
+						background: #fff;
+						transition: all $t;
+						border-left: 1px solid #eef3f9;
+					}
+
+					&:hover{
+						> .sub-menu{
+							transform: translateX(0);
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+
+				> li{
+					> a{
+						padding: 10px 25px;
+					}
+				}
+			}
+
+			&:hover{
+				> .sub-menu{
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
+			}
+		}
+
+		li:hover > a{
+			color: $primary;
+		}
+
+		a{
+			color: $text-color;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		.current-menu-item,
+		.current-menu-parent{
+			> a{
+				color: $primary;
+			}
+		}
+
+		.current-menu-item{
+			> a{
+				cursor: default;
+			}
+		}
+
+		@media screen and (max-width: 1199px){
+			> li > a{
+				font-size: 13px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+}

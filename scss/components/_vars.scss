@@ -1,0 +1,27 @@
+// Fonts
+$main-font: 'Roboto', Arial, sans-serif;
+$second-font: 'Gotham Pro', $main-font;
+// $third-font: 'Playfair Display SC', serif;
+
+// Colors
+$blue: #009cd6;
+$red: #f35150;
+
+$dark: #0e3f60;
+$gray: #313131;
+$light: #99A2B4;
+
+$text-color: #57758f;
+$text-dark: $dark;
+$text-light: #6B6B6B;
+
+$primary: $blue;
+$accent: $red;
+
+$gradient: linear-gradient(to top, #2283df 0%, #03a8e5 100%);
+
+// Params
+$body-bg: #fff; // site background
+$t: .3s; // animation duration
+$r: 3px; // default border radius
+$shadow: 0px 3px 9px rgba(#22578e, 0.09); // default card shadow

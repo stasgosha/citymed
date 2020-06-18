@@ -1,0 +1,27 @@
+.profosmotr-section{
+	padding: 80px 0;
+
+	.section-caption{
+		margin-bottom: 35px;
+	}
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 330px;
+		grid-gap: 30px;
+	}
+
+	.section-features{
+		margin-bottom: 45px;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.small-advantages-section + .profosmotr-section:not(.light-bg){
+	padding-top: 0;
+}
