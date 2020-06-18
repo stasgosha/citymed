@@ -64,6 +64,10 @@
 		.modal-dialog{
 			width: calc(100% - 20px);
 			max-width: 390px;
+
+			@media screen and (max-width: 575px){
+				max-width: 290px;
+			}
 		}
 	}
 
@@ -82,32 +86,16 @@
 		background: #fff;
 		padding: 0;
 		border-radius: 0;
-		padding: 85px 100px 80px;
-
-		.section-caption{
-			margin-bottom: 20px;
-
-			@media screen and (min-width: 576px){
-				.sc-title{
-					padding-left: 130px;
-					text-indent: -80px;
-				}
-			}
-
-			@media screen and (max-width: 575px){
-				.sc-title{
-					padding-right: 50px;
-				}
-
-				br{
-					display: none;
-				}
-			}
-		}
+		padding: 50px 40px;
+		border-radius: 5px;
 
 		@media screen and (max-width: 575px){
-			padding: 45px 20px 20px;
+			padding: 30px 20px 40px;
 		}
+	}
+
+	.modal-text{
+		text-align: center;
 	}
 
 	&.visible{
@@ -127,52 +115,45 @@
 		}
 	}
 
-	@media screen and (min-width: 768px){
-		&#newsletter-modal{
-			.section-caption{
-				.sc-title{
-					padding-left: 190px;
-					text-indent: -140px;
-				}
-			}
-		}
+	.form-field{
+		width: 100%;
 	}
 
-	@media screen and (max-width: 374px){
-		.section-caption .sc-title{
-			padding-left: 0;
-			padding-bottom: 0;
-			padding-top: 7px;
+	.order-form{
+		.last{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 15px;
+		}
 
-			&:before{
-				left: 0;
-				top: 0;
-			}
+		.btn{
+			width: 100%;
 		}
 	}
 }
 
 .modal-close{
 	position: absolute;
-	right: 22px;
-	top: 25px;
+	right: 0;
+	top: 0;
 	width: 30px;
 	height: 30px;
-	border-radius: 50%;
+	// border-radius: 50%;
 	opacity: 1;
 	transition: all $t;
 	appearance: none;
 	background: transparent;
-	border: 2px solid rgba(#313131, .56);
+	// border: 2px solid rgba(#313131, .56);
 	cursor: pointer;
 
 	&:before,
 	&:after{
 		content: '';
 		display: block;
-		width: 18px;
+		width: 16px;
 		height: 2px;
-		background: rgba(#313131, .56);
+		background: #000;
 		position: absolute;
 		left: calc(50% - 9px);
 		top: calc(50% - 1px);
@@ -190,13 +171,27 @@
 
 	&:hover,
 	&:focus{
-		border-color: #313131;
-
 		&:before,
 		&:after{
-			background: #313131;
+			background: $accent;
 		}
 	}
+}
+
+.modal-caption{
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 25px;
+	font-weight: 500;
+	color: $text-dark;
+}
+
+.modal-image{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
 }
 
 .order-form{
