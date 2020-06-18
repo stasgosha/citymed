@@ -41,6 +41,17 @@
 	}
 
 	@media screen and (max-width: 1299px){
+		.section-content{
+			padding-left: 50px;
+
+			&:before{
+				height: 220px;
+				left: -50px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1249px){
 		.section-inner{
 			grid-template-columns: 50% 50%;
 		}
@@ -49,6 +60,14 @@
 			padding-left: 25px;
 			padding-top: 35px;
 
+			&:before{
+				height: 248px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-content{
 			&:before{
 				height: 213px;
 			}

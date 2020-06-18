@@ -82,7 +82,7 @@
 
 // Select
 .form-field{
-	display: inline-flex;
+	// display: inline-flex;
 	cursor: pointer;
 
 	&.fullwidth{
@@ -100,6 +100,7 @@
 		transition: all $t;
 		cursor: pointer;
 		width: 100%;
+		max-width: 100%;
 		// min-width: auto;
 	}
 

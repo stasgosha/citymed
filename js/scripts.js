@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		speed: 600,
 		responsive: [
 			{
-				breakpoint: 1300,
+				breakpoint: 1250,
 				settings: {
 					slidesToShow: 2,
 					// arrows: false

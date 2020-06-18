@@ -22,9 +22,9 @@
 
 	&:hover,
 	&:focus{
-		background: $dark;
+		background: $primary;
 		color: #fff;
-		border-color: $dark;
+		border-color: $primary;
 	}
 
 	&:focus{
@@ -39,9 +39,10 @@
 		background: $gradient;
 		color: #fff;
 
-		&:hover{
+		&:hover,
+		&:focus{
 			background: #fff;
-			color: $dark;
+			color: $primary;
 		}
 	}
 
@@ -58,7 +59,8 @@
 		border-color: $accent;
 		background: $accent;
 
-		&:hover{
+		&:hover,
+		&:focus{
 			background: darken($accent, 10%);
 		}
 	}
